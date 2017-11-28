@@ -20,6 +20,8 @@ Brauhaus.Recipe.fromBeerXml = (xml) ->
                     recipe.batchSize = parseFloat recipeProperty.textContent
                 when 'boil_size'
                     recipe.boilSize = parseFloat recipeProperty.textContent
+                when 'boil_time'
+                    recipe.boilTime = parseFloat recipeProperty.textContent
                 when 'efficiency'
                     recipe.mashEfficiency = parseFloat recipeProperty.textContent
                 when 'primary_age'
