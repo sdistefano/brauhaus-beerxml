@@ -141,7 +141,11 @@ Brauhaus.Recipe.fromBeerXml = (xml) ->
                                     yeast.form = yeastProperty.textContent
                                 when 'attenuation'
                                     yeast.attenuation = parseFloat yeastProperty.textContent
-
+				when 'display_amount'
+                                    yeast.display_amount = yeastProperty.textContent
+				when 'amount'
+				   yeast.amount = parseFloat yeastProperty.textContent
+				
                         recipe.yeast.push yeast
                 when 'mash'
                     mash = recipe.mash = new Brauhaus.Mash()
